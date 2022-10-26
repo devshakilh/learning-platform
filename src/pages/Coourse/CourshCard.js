@@ -7,22 +7,24 @@ const CourshCard = () => {
 
     return (
         <div>
+            <div>
 
 
-            <Container>
-                <Row>
-                    <Col lg='4'>
-                        <LeftSide></LeftSide>
-                    </Col>
+                <Container>
+                    <Row>
+                        <Col lg='4'>
+                            <LeftSide></LeftSide>
+                        </Col>
 
 
-                    <Col lg='8'>
-                        <RightSide></RightSide>
-                    </Col>
-                </Row>
-            </Container>
+                        <Col lg='8'>
+                            <RightSide></RightSide>
+                        </Col>
+                    </Row>
+                </Container>
 
 
+            </div>
         </div>
     );
 };

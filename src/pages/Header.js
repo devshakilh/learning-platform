@@ -9,7 +9,9 @@ import './Header.css';
 import { FaUser } from 'react-icons/fa';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { Button } from 'react-bootstrap';
-
+import { useState } from 'react';
+import { useEffect } from 'react';
+import image from './fav.webp'
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -19,22 +21,36 @@ const Header = () => {
             .then(() => { })
             .catch(error => console.error(error))
     }
+
+
+    const [theme, setTheme] = useState("light-theme");
+    const toggleTheme = () => {
+        if (theme === "dark-theme") {
+            setTheme("light-theme");
+        } else {
+            setTheme("dark-theme");
+        }
+    };
+    useEffect(() => {
+        document.body.className = theme;
+    }, [theme]);
     return (
         <div>
             <Navbar className='py-4' bg="dark" variant="dark" expand="lg">
                 <Container>
-                    <Navbar.Brand><Link className='home-nav pr-10' to='/'>Learn with Programming</Link> </Navbar.Brand>
+                    <Navbar.Brand className='title'><img className='image-wh' src={image} alt="" /> <Link className='home-nav' to='/'>Learn with Programming</Link> </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <Nav><Link className='home-nav' to='/home'>Home</Link></Nav>
                             <Nav><Link className='home-nav' to='/blog'>Blog</Link>Link</Nav>
-                            <Nav><Link className='home-nav' to='blog'>FAQ</Link>Link</Nav>
+                            <Nav><Link className='home-nav' to='/faq'>FAQ</Link>Link</Nav>
                             <Nav><Link className='home-nav' to='/courshcard'>Course</Link>Link</Nav>
 
                         </Nav>
                         <Nav>
-                            <Nav ><Link className='home-nav' to='/login'>Login</Link></Nav>
+                            {/* <Nav ><Link className='home-nav' to='/login'>Login</Link></Nav> */}
+                            <Nav>  <Button className='me-4' onClick={() => toggleTheme()} variant="success">Toggle Theme</Button></Nav>
                             <Nav>
                                 <>
                                     {
@@ -45,14 +61,14 @@ const Header = () => {
                                             </>
                                             :
                                             <>
-                                                <Link to='/login'>Login</Link>
-                                                <Link to='/register'>Register</Link>
+                                                <Link to='/login' className='home-nav'>Login</Link>
+                                                <Link to='/register' className='home-nav'>Register</Link>
                                             </>
                                     }
 
 
                                 </>
-                                <Link to="/profile">
+                                <Link to={user?.displayName}>
                                     {user?.photoURL ?
                                         <Image
                                             style={{ height: '30px' }}

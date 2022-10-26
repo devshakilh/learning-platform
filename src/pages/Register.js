@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
-
+import './Register.css'
 const Register = () => {
     const [error, setError] = useState('');
     const [accepted, setAccepted] = useState(false);
@@ -57,7 +57,7 @@ const Register = () => {
     }
 
     return (
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit} className='form'>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Your Name</Form.Label>
                 <Form.Control name="name" type="text" placeholder="Your Name" />
@@ -80,7 +80,7 @@ const Register = () => {
                 <Form.Check
                     type="checkbox"
                     onClick={handleAccepted}
-                    label={<>Accept <Link to="/terms">Terms and conditions</Link></>} />
+                    label={<>Accept <Link to="/login">Already have an account Plz Login</Link></>} />
             </Form.Group>
             <Button variant="primary" type="submit" disabled={!accepted}>
                 Register

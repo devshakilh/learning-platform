@@ -6,6 +6,7 @@ import Login from '../pages/Login';
 import ErrorPage from "../pages/ErrorPage";
 import Register from "../pages/Register";
 import CourshCard from "../pages/Coourse/CourshCard";
+import Faq from "../pages/Coourse/Faq";
 
 export const routes = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ export const routes = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blog></Blog>
+            },
+            {
+                path: '/faq',
+                element: <Faq></Faq>
             },
             {
                 path: '/register',

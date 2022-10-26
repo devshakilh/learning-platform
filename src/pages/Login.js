@@ -7,7 +7,7 @@ import { AuthContext } from '../AuthProvider/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
 
 import Form from 'react-bootstrap/Form';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
 
@@ -54,7 +54,7 @@ const Login = () => {
     }
     return (
         <div>
-            <Form onSubmit={handleSubmit} className='w-50 justify-content-center'>
+            <Form onSubmit={handleSubmit} className='form'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control name="email" type="email" placeholder="Enter email" required />
@@ -69,6 +69,8 @@ const Login = () => {
                 <Button variant="primary" type="submit">
                     Login
                 </Button>
+                <Link to="/register">if you not registered please Register</Link>
+
                 <Form.Text className="text-danger">
                     {error}
                 </Form.Text>
