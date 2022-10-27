@@ -46,7 +46,7 @@ const Header = () => {
                         </Nav>
                         <Nav>
                             {/* <Nav ><Link className='home-nav' to='/login'>Login</Link></Nav> */}
-                            <Nav>  <Button className='me-4' onClick={() => toggleTheme()} variant="success">Toggle Theme</Button></Nav>
+                            <Nav>  <Button className='me-4' onClick={() => toggleTheme()} variant="success">{theme ? 'light' : 'dark'}</Button></Nav>
                             <Nav>
                                 <>
                                     {
@@ -64,16 +64,16 @@ const Header = () => {
 
 
                                 </>
-                                <Link to={user?.displayName}>
+                                <span title={user?.displayName}>
                                     {user?.photoURL ?
                                         <Image
                                             style={{ height: '30px' }}
-                                            roundedCircle
+                                            rounded
                                             src={user?.photoURL}>
                                         </Image>
                                         : <FaUser></FaUser>
                                     }
-                                </Link>
+                                </span>
                             </Nav>
                         </Nav>
                     </Navbar.Collapse>

@@ -50,12 +50,12 @@ export const routes = createBrowserRouter([
             {
                 path: '/coursedetailsmap/:id',
                 element: <CourseDetailsMap></CourseDetailsMap>,
-                loader: ({ params }) => fetch(`http://localhost:5000/course-details/${params.id}`)
+                loader: ({ params }) => fetch(`https://learn-with-programming-server-ten.vercel.app/course-details/${params.id}`)
             },
             {
                 path: '/cheekout/:_id',
                 element: <PrivateRouts><CheekOut></CheekOut></PrivateRouts>,
-                loader: ({ params }) => fetch(`http://localhost:5000/course-premium/${params._id}`)
+                loader: ({ params }) => fetch(`https://learn-with-programming-server-ten.vercel.app/course-premium/${params._id}`)
             }
         ]
     }
