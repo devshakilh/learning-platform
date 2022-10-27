@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import image from './home.png';
 const Home = () => {
     return (
-        <div className='d-flex  align-items-center mx-5'>
+        <div className='d-flex  align-items-center mx-5 col-sm-1'>
             <div>
                 <h3 className='mb-4'>Start your favourite course</h3>
                 <h1 className='font-size-10px'>Now learning from anywhere, and build your bright createBrowserRouter</h1>
