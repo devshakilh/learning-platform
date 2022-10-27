@@ -9,6 +9,7 @@ import CourshCard from "../pages/Coourse/CourshCard";
 import Faq from "../pages/Faq.js/Faq";
 import CourseDetailsMap from "../pages/Coourse/CourseDetailsMap";
 import CheekOut from "../pages/Coourse/CheekOut";
+import PrivateRouts from "./PrivateRouts/PrivateRouts";
 
 export const routes = createBrowserRouter([
     {
@@ -53,7 +54,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/cheekout/:_id',
-                element: <CheekOut></CheekOut>,
+                element: <PrivateRouts><CheekOut></CheekOut></PrivateRouts>,
                 loader: ({ params }) => fetch(`http://localhost:5000/course-premium/${params._id}`)
             }
         ]
