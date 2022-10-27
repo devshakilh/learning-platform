@@ -18,14 +18,14 @@ const RightSide = () => {
     }, [])
     return (
         <div className='pt-5 '>
+            <Container >
+                <Row className='grid cols-2'>
+                    {
+                        categories.map(category => <div key={category.id}>
+                            <Link to={`/coursedetailsmap/${category.id}`}>
 
-            {
-                categories.map(category => <div key={category.id}>
-                    <Link to={`/coursedetailsmap/${category.id}`}>
 
-                        <Container>
-                            <Row>
-                                <Col className='card-grid'>
+                                <Col className='d-flex'>
                                     <Card style={{ width: '18rem' }}>
                                         <Card.Img variant="top" src={category.image} />
                                         <Card.Body>
@@ -38,18 +38,19 @@ const RightSide = () => {
                                         </Card.Body>
                                     </Card>
                                 </Col>
-                            </Row>
 
 
-
-                        </Container>
-
-                    </Link></div>
-                )
-            }
+                            </Link></div>
+                        )
+                    }
 
 
-        </div>
+                </Row>
+
+
+            </Container>
+        </div >
+
     );
 };
 

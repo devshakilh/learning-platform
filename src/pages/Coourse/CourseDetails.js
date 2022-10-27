@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col';
 import './RightSide.css'
 import { Link } from 'react-router-dom';
 
-// import Pdf from "react-to-pdf";
+import Pdf from "react-to-pdf";
 const CourseDetails = ({ course }) => {
     const ref = React.createRef();
     const { price, name, short_des, image, _id } = course;
@@ -15,12 +15,12 @@ const CourseDetails = ({ course }) => {
         <div>
             <Container>
                 <Row>
-                    <Col className='card-details'>
+                    <Col ref={ref} className='card-details '>
 
                         <Card style={{ width: '18rem' }}>
-                            {/* <Pdf targetRef={ref} filename="code-example.pdf">
+                            <Pdf targetRef={ref} filename="code-example.pdf">
                                 {({ toPdf }) => <button onClick={toPdf}>Generate Pdf</button>}
-                            </Pdf> */}
+                            </Pdf>
                             <Card.Img variant="top" src={image} />
                             <Card.Body>
 

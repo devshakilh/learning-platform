@@ -23,13 +23,9 @@ const Header = () => {
     }
 
 
-    const [theme, setTheme] = useState("light-theme");
+    const [theme, setTheme] = useState(false);
     const toggleTheme = () => {
-        if (theme === "dark-theme") {
-            setTheme("light-theme");
-        } else {
-            setTheme("dark-theme");
-        }
+        setTheme(!theme)
     };
     useEffect(() => {
         document.body.className = theme;
