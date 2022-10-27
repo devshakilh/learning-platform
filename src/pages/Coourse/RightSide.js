@@ -17,13 +17,13 @@ const RightSide = () => {
 
     }, [])
     return (
-        <div className='pt-5'>
+        <div className='pt-5 '>
 
             {
-                categories.map(category => <span key={category.id}>
-                    <Link to={`${category.id}}`}>
+                categories.map(category => <div key={category.id}>
+                    <Link to={`/coursedetailsmap/${category.id}`}>
 
-                        <Container >
+                        <Container>
                             <Row>
                                 <Col className='card-grid'>
                                     <Card style={{ width: '18rem' }}>
@@ -34,17 +34,17 @@ const RightSide = () => {
                                                 Some quick example text to build on the card title and make up the
                                                 bulk of the card's content.
                                             </Card.Text>
-                                            <Button variant="primary">Go somewhere</Button>
+                                            <Button variant="primary">Course Details</Button>
                                         </Card.Body>
                                     </Card>
                                 </Col>
-
                             </Row>
+
 
 
                         </Container>
 
-                    </Link></span>
+                    </Link></div>
                 )
             }
 

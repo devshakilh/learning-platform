@@ -3,8 +3,8 @@ import { FaGoogle, FaGithub } from 'react-icons/fa';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { useContext } from 'react';
-import { AuthContext } from '../AuthProvider/AuthProvider';
-import { GoogleAuthProvider } from 'firebase/auth';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 
 import Form from 'react-bootstrap/Form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -17,6 +17,10 @@ const Login = () => {
     const googleProvider = new GoogleAuthProvider()
     const handleGoogleSignIn = () => {
         providerLogin(googleProvider)
+    }
+    const githubProvider = new GithubAuthProvider()
+    const handleGithubProvider = () => {
+        providerLogin(githubProvider)
     }
     const [error, setError] = useState('');
     const { signIn, setLoading } = useContext(AuthContext);
@@ -69,7 +73,7 @@ const Login = () => {
                 <Button variant="primary" type="submit">
                     Login
                 </Button>
-                <Link to="/register">if you not registered please Register</Link>
+                <Link to="/register"><h5>Plz Register</h5></Link>
 
                 <Form.Text className="text-danger">
                     {error}
@@ -77,7 +81,7 @@ const Login = () => {
             </Form>
             <ButtonGroup vertical className='mt-4'>
                 <Button onClick={handleGoogleSignIn} className='mb-2' variant='outline-primary'><FaGoogle></FaGoogle>Login with Google</Button>
-                <Button variant="outline-dark"><FaGithub></FaGithub>Login with Github</Button>
+                <Button onClick={handleGithubProvider} variant="outline-dark"><FaGithub></FaGithub>Login with Github</Button>
 
 
             </ButtonGroup>

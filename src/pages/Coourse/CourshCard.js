@@ -17,7 +17,7 @@ const CourshCard = () => {
                         </Col>
 
 
-                        <Col lg='8'>
+                        <Col lg='8' >
                             <RightSide></RightSide>
                         </Col>
                     </Row>

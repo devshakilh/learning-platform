@@ -7,4 +7,17 @@
 .category-text {
 
     color: black;
+
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 33.3% 33.%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card-details {
+    padding-top: 15px;
+
 }

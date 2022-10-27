@@ -7,11 +7,11 @@ import Image from 'react-bootstrap/Image'
 import './Header.css';
 
 import { FaUser } from 'react-icons/fa';
-import { AuthContext } from '../AuthProvider/AuthProvider';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { Button } from 'react-bootstrap';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import image from './fav.webp'
+import image from '../fav.webp'
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
