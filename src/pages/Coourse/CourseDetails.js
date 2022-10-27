@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 // import Pdf from "react-to-pdf";
 const CourseDetails = ({ course }) => {
-    // const ref = React.createRef();
+    const ref = React.createRef();
     const { price, name, short_des, image, _id } = course;
     return (
         <div>

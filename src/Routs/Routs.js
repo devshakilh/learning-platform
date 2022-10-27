@@ -54,7 +54,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/cheekout/:_id',
                 element: <CheekOut></CheekOut>,
-                loader: ({ params }) => fetch(`http://localhost:5000/course-details/${params._id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/course-premium/${params._id}`)
             }
         ]
     }
