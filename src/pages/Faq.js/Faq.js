@@ -15,10 +15,8 @@ const Faq = () => {
                 <h1><li>What is this web site for?</li></h1>
                 <h4>Programming Courses</h4>
             </div>
-            <div>
-                <h1><li>What courses are there?</li></h1>
-                <h4>Html,Css,Javascript,React,Python,Php and Wordpress</h4>
-            </div>
+
+
         </div>
     );
 };
