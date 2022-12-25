@@ -6,7 +6,19 @@
 }
 
 .image-wh {
-    height: 6%;
-    width: 6%;
-    margin-right: 10px;
+    height: 10%;
+    width: 10%;
+    margin-right: -42%;
+}
+
+.color {
+    background-color: #007bb7;
+}
+
+.mr-2 {
+    padding-right: 10px;
+}
+
+#nav-l {
+    margin-left: 92px;
 }

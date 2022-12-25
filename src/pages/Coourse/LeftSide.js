@@ -18,7 +18,7 @@ const LeftSide = () => {
     return (
         <div className='pt-5'>
 
-            <div >
+            <div className='margin' >
                 {
                     categories.map(category => <div key={category.id}>
                         <h1 className='category-text'> <Link to={`/coursedetailsmap/${category.id}`}>{category.name}</Link></h1></div>

@@ -103,7 +103,7 @@ const Register = () => {
                         onClick={handleAccepted}
                         label={<>Accept <Link to="/login"><h5>Login</h5></Link></>} />
                 </Form.Group>
-                <Button onClick={() => handleVerify()} variant="primary" type="submit" disabled={!accepted}>
+                <Button className='button-form' onClick={() => handleVerify()} variant="primary" type="submit" disabled={!accepted}>
                     Register
                 </Button>
 
@@ -111,7 +111,7 @@ const Register = () => {
                     {error}
                 </Form.Text>
             </Form>
-            <ButtonGroup vertical className='mt-4'>
+            <ButtonGroup vertical className='mt-4 mb-4'>
                 <Button onClick={handleGoogleSignIn} className='mb-2' variant='outline-primary'><FaGoogle></FaGoogle>Login with Google</Button>
                 <Button onClick={handleGithubProvider} variant="outline-dark"><FaGithub></FaGithub>Login with Github</Button>
 

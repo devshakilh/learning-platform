@@ -32,27 +32,27 @@ const Header = () => {
     }, [theme]);
     return (
         <div>
-            <Navbar className='py-4' bg="dark" variant="dark" expand="lg">
+            <Navbar className='py-4' bg='primary' variant="dark" expand="lg">
                 <Container>
-                    <Navbar.Brand className='title'><img className='image-wh' src={image} alt="" /> <Link className='home-nav' to='/'>Learn with Programming</Link> </Navbar.Brand>
+                    <Navbar.Brand className='title'> <Link className='home-nav' to='/'>Learn with Programming</Link> </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav><Link className='home-nav' to='/home'>Home</Link></Nav>
-                            <Nav><Link className='home-nav' to='/blog'>Blog</Link>Link</Nav>
-                            <Nav><Link className='home-nav' to='/faq'>FAQ</Link>Link</Nav>
-                            <Nav><Link className='home-nav' to='/courshcard'>Course</Link>Link</Nav>
+                            <Nav><Link id='nav-l' className='home-nav' to='/home'>Home</Link></Nav>
+                            <Nav><Link className='home-nav' to='/blog'>Blog</Link></Nav>
+                            <Nav><Link className='home-nav' to='/faq'>FAQ</Link></Nav>
+                            <Nav><Link className='home-nav' to='/courshcard'>Course</Link></Nav>
 
                         </Nav>
                         <Nav>
                             {/* <Nav ><Link className='home-nav' to='/login'>Login</Link></Nav> */}
                             <Nav>  <Button className='me-4' onClick={() => toggleTheme()} variant="success">{theme ? 'light' : 'dark'}</Button></Nav>
                             <Nav>
-                                <>
+                                <span className='mr-2'>
                                     {
                                         user?.uid ?
                                             <>
-                                                <span>{user?.displayName}</span>
+
                                                 <Button variant="light" onClick={handleLogOut}>Log out</Button>
                                             </>
                                             :
@@ -63,17 +63,18 @@ const Header = () => {
                                     }
 
 
-                                </>
-                                <span title={user?.displayName}>
+                                </span>
+                                <Link title={user?.displayName}>
                                     {user?.photoURL ?
                                         <Image
                                             style={{ height: '30px' }}
                                             rounded
                                             src={user?.photoURL}>
                                         </Image>
-                                        : <FaUser></FaUser>
+                                        :
+                                        <FaUser></FaUser>
                                     }
-                                </span>
+                                </Link>
                             </Nav>
                         </Nav>
                     </Navbar.Collapse>

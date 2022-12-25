@@ -10,6 +10,7 @@ import Faq from "../pages/Faq.js/Faq";
 import CourseDetailsMap from "../pages/Coourse/CourseDetailsMap";
 import CheekOut from "../pages/Coourse/CheekOut";
 import PrivateRouts from "./PrivateRouts/PrivateRouts";
+import Footer from "../pages/Footer/Footer";
 
 export const routes = createBrowserRouter([
     {
@@ -46,6 +47,10 @@ export const routes = createBrowserRouter([
                 element: <CourshCard></CourshCard>
 
 
+            },
+            {
+                path: '/footer',
+                element: <Footer></Footer>
             },
             {
                 path: '/coursedetailsmap/:id',

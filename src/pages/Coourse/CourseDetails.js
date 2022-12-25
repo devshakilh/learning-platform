@@ -12,10 +12,10 @@ const CourseDetails = ({ course }) => {
     const ref = React.createRef();
     const { price, name, short_des, image, _id } = course;
     return (
-        <div>
+        <div className='pt-8'>
             <Container>
                 <Row>
-                    <Col ref={ref} className='card-details '>
+                    <Col ref={ref} className='card-details  '>
 
                         <Card style={{ width: '18rem' }}>
                             <Pdf targetRef={ref} filename="code-example.pdf">

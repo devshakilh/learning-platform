@@ -70,7 +70,7 @@ const Login = () => {
                     <Form.Control name="password" type="password" placeholder="Password" required />
                 </Form.Group>
 
-                <Button variant="primary" type="submit">
+                <Button className='button-form' variant="primary" type="submit">
                     Login
                 </Button>
                 <Link to="/register"><h5>Plz Register</h5></Link>
@@ -79,7 +79,7 @@ const Login = () => {
                     {error}
                 </Form.Text>
             </Form>
-            <ButtonGroup vertical className='mt-4'>
+            <ButtonGroup vertical className='mt-4 mb-4'>
                 <Button onClick={handleGoogleSignIn} className='mb-2' variant='outline-primary'><FaGoogle></FaGoogle>Login with Google</Button>
                 <Button onClick={handleGithubProvider} variant="outline-dark"><FaGithub></FaGithub>Login with Github</Button>
 

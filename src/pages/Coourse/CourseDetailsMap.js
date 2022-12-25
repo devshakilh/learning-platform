@@ -5,7 +5,7 @@ const CourseDetailsMap = () => {
     const cores = useLoaderData();
 
     return (
-        <div>
+        <div className=' justify-content-center'>
 
             {
                 cores.map(course => <CourseDetails

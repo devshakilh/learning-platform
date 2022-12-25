@@ -12,14 +12,20 @@ const CourshCard = () => {
 
                 <Container>
                     <Row>
-                        <Col lg='4'>
+                        <Col lg={4}>
                             <LeftSide></LeftSide>
                         </Col>
 
 
-                        <Col lg='8' >
+                        <Col lg={8} >
+
+
+
                             <RightSide></RightSide>
+
+
                         </Col>
+
                     </Row>
                 </Container>
 

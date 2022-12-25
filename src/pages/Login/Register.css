@@ -3,8 +3,16 @@
     margin-right: auto;
     margin-top: 50px;
 
-    width: 20%;
+    width: 50%;
     height: 50%;
     background-color: rgb(38, 184, 184);
     border-radius: 10px;
+}
+
+
+
+.image-size {
+    width: 90%;
+    height: 90%;
+
 }
